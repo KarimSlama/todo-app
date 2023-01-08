@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +52,7 @@ Widget buildTaskItems(Map model, context) => Dismissible(
                             status: 'done',
                             id: model['id'],
                           );
+                          AudioPlayer().play(AssetSource('audios/pop.mp3'));
                         },
                         icon: const Icon(Icons.check_circle_outline_outlined),
                         color: Colors.black38),
@@ -67,6 +69,13 @@ Widget buildTaskItems(Map model, context) => Dismissible(
                       icon: const Icon(Icons.archive_outlined),
                       color: Colors.black26,
                     ),
+                    // ElevatedButton(
+                    //   onPressed: () =>
+                    //
+                    //   child: Text(
+                    //     'play',
+                    //   ),
+                    // ),
                   ],
                 ),
               ],
